@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import HueContainer from './containers/HueContainer';
 import LightnessContainer  from './containers/LightnessContainer'
 import SaturationContainer  from './containers/SaturationContainer'
-import { useMemo } from 'react';
+
 
 export default function ColorPicker(props) {
     console.log({props})
