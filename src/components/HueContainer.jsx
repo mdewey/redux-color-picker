@@ -6,11 +6,12 @@ import Slider from '../Slider'
 
 
 const mapStateToProps = state => ({
-    color:state.colorReducer
+    value:state.colorReducer.hue || 0 ,
+    label:"hue"
 })
 
 const mapDispatchToProps = dispatch => ({
-    hueChanged: newColorValue => dispatch(hueChanged(newColorValue))
+    updateColor: newColorValue => dispatch(hueChanged(newColorValue))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Slider)

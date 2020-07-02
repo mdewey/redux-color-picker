@@ -1,19 +1,19 @@
 import {connect} from 'react-redux'
 
-import  {hueChanged} from '../actions'
+import  { saturationChanged} from '../actions'
 
 import Slider from '../Slider'
 
 
 const mapStateToProps = state => ({
-    value:state.colorReducer.hue || 0 ,
-    label:"hue",
+    value:state.colorReducer.saturation || 0 ,
+    label:"saturation", 
     min:0,
-    max:360
+    max:100
 })
 
 const mapDispatchToProps = dispatch => ({
-    updateColor: newColorValue => dispatch(hueChanged(newColorValue))
+    updateColor: newColorValue => dispatch(saturationChanged(newColorValue))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Slider)
